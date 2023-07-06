@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>contact us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="left-side">
+                <div class="address details">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="topic">العنوان</div>
+                    <div class="text-one">الطائف</div>
+                    <div class="text-two">جامعة االطائف </div>
+                </div>
+                <div class="phone details">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="topic">أرقامنا</div>
+                    <div class="text-one">0127272020</div>
+                    <div class="text-two">920002122</div>
+                </div>
+                <div class="email details">
+                    <i class="fas fa-envelope"></i>
+                    <div class="topic">البريد الالكتروني</div>
+                    <div class="text-one">websupport@tu.edu.sa</div>
+
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="topic-text">ارسل لنا رسالة</div><br><br>
+                <form action="reservation.php" method="post">
+                    <div class="input-box">
+                        <input type="text" name="name" placeholder="أدخل اسمك ">
+                    </div><br>
+                    <div class="input-box">
+                        <input type="text" name="email" placeholder="ادخل عنوان بريدك">
+                    </div>
+                    <div class="input-box message-box">
+                        <label for="message"> </label>
+                        <textarea id="message" name="visitor_message" placeholder="اكتب رسالتك هنا " required></textarea>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="أرسل">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

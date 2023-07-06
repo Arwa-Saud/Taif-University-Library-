@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>حجز المواعيد </title>
+    <style>
+        body {
+            background-image: url('undraw_booked_re_vtod.svg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        header {
+            padding: 30px;
+            text-align: left;
+            font-size: 30px;
+        }
+        
+        nav {
+            float: left;
+            width: 20%;
+            height: 300px;
+            padding: 20px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        article {
+            float: left;
+            padding: 20px;
+            width: 50%;
+            height: 300px;
+        }
+        
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        footer {
+            padding: 10px;
+            text-align: center;
+            color: #0000;
+        }
+        
+        @media (max-width: 600px) {
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        input[type=button],
+        input[type=submit],
+        input[type=reset] {
+            background-color: #bdbdbd;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+    <header>
+        <br>
+        <br>
+
+        <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; حجز المواعيد </h2>
+    </header>
+    <nav>
+
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="form p-6 pb-12 sm:p-12 sm:pb-16 md:p-20 md:pb-24">
+        <div class="max-w-screen-sm mx-auto">
+            <form action="reservation.php" id="ft-form" method="POST" accept-charset="UTF-8">
+                <fieldset>
+                    <legend>بيانات الطالب</legend>
+                    <label>
+                                الاسم
+                                <input type="text" name="name" required>
+                              </label>
+                    <div class="two-cols">
+                        <label>
+                                  البريد الالكتروني
+                                  <input type="email" name="email" required>
+                                </label>
+                        <label>
+                                  رقم الهاتف
+                                  <input type="tel" name="phone">
+                                </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>طلب موعد</legend>
+                    <div class="two-cols">
+                        <label>
+                                  التاريخ
+                                  <input type="date" name="Appointment request" required>
+                                </label>
+                        <div class="inline">
+                            <label>
+                                    <input type="hidden" name="Morning desired" value="no">
+                                    <input type="checkbox" name="Morning desired" value="yes">
+                                   الصباح
+                                  </label>
+                            <label>
+                                    <input type="hidden" name="Afternoon desired" value="no">
+                                    <input type="checkbox" name="Afternoon desired" value="yes">
+                                    المساء
+                                  </label>
+                        </div>
+                    </div>
+                    <p> لتاكيد الطلب ارسال رسالة عبر: </p>
+                    <div class="inline">
+                        <label>
+                                  <input type="radio" name="Confirmation requested by" value="email" checked>
+                                  البريد الالكتروني
+                                </label>
+                        <label>
+                                  <input type="radio" name="Confirmation requested by" value="phone">
+                                  رقم الهاتف
+                                </label>
+
+                    </div>
+                </fieldset>
+    <footer>
+
+        <input type="reset" value="اعادة تعيين">
+        <input type="submit" value="ارفاق">
+
+
+    </footer>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        var myDate = new Date();
+        var Hour = myDate.getHours();
+        var Minute = myDate.getMinutes();
+        if (Hour < 12 && Hour > 0) {
+            alert("صباح الخير");
+        } else if (Hour > 12 && Hour < 18) {
+            alert("أهلا بكم");
+        } else if (Hour > 18 && Hour < 23) {
+            alert("مساء الخير");
+        }
+    </script>
+    </body>
+
+</html>

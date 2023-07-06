@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>طلب كتاب</title>
+    <link rel="stylesheet" href="CSSprojectcopy.css">
+    <script>
+        var currentDateTime = new Date();
+        var year = currentDateTime.getFullYear();
+        var month = (currentDateTime.getMonth() + 1);
+        var date = (currentDateTime.getDate() + 1);
+
+        if (date < 10) {
+            date = '0' + date;
+        }
+        if (month < 10) {
+            month = '0' + month;
+        }
+
+        var dateTomorrow = year + "-" + month + "-" + date;
+        var BorrowElem = document.querySelector("#Borrow-date");
+        var submissionElem = document.querySelector("#submission-date");
+
+        BorrowElem.setAttribute("min", dateTomorrow);
+
+        BorrowElem.onchange = function() {
+            submission.setAttribute("min", this.value);
+        }
+    </script>
+</head>
+
+<body>
+    <a href="#bottom">scroll down</a>
+    <form action="reservation.php" method="post">
+        <div class="elem-group">
+            <label for="name">الاسم</label>
+            <input type="text" id="name" name="visitor_name" placeholder="Sara Saad" required>
+        </div>
+        <div class="elem-group">
+            <label for="email">البريد الإلكتروني </label>
+            <input type="email" id="email" name="visitor_email" placeholder="name@email.com" required>
+        </div>
+        <div class="elem-group">
+            <label for="phone">رقم الجوال</label>
+            <input type="tel" id="phone" name="visitor_phone" placeholder="(+966)-##-###-####">
+        </div>
+        <hr>
+        <div class="elem-group inlined1">
+            <label for="book">عدد الكتب المطلوبة</label>
+            <input type="number" id="book" name="book" placeholder="2" min="1" required>
+        </div>
+
+        <div class="elem-group inlined">
+            <label for="Borrow-date">تاريخ الاستعارة </label>
+            <input type="date" id="Borrow-date" name="Borrow" required>
+        </div>
+        <div class="elem-group inlined">
+            <label for="submission-date">تاريخ إعادة الكتاب</label>
+            <input type="date" id="submission-date" name="submission" required>
+        </div>
+        <div class="elem-group">
+            <label for="book-Section">قسم الكتاب</label>
+            <select id="book-Section" name="book-Section" required>
+        <option value="">اختر قسم الكتاب من القائمة</option>
+        <option value="arabic">عربي</option>
+      <option value="English ">انجليزي</option>
+        <option value="Computer">كمبيوتر</option>
+       <option value=" History">تاريخ </option>
+         <option value=" religion"> دين </option>
+    </select>
+        </div>
+        <hr>
+        <div class="elem-group">
+            <label for="message">عنوان الكتاب </label>
+            <textarea id="message" name="visitor_message" placeholder="من فضلك اكتب عنوان الكتاب و رقمه " required></textarea>
+        </div>
+        <button type="submit">إرفاق</button>
+    </form>
+    <a href="#top">scroll up</a>
+    <a id="bottom"></a>
+</body>
+
+</html>
